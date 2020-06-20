@@ -21,7 +21,7 @@
 
 	<!--content-->
 
-   @yied('content') 
+   @yield('content') 
 
 	<!--/content-->
 
@@ -29,7 +29,7 @@
 
 		
 	<!--.script -->
-	@include('inc.scripts')
+	@include('inc.script')
 	<!--/.script -->
 	
 </body>
