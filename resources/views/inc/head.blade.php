@@ -1,10 +1,12 @@
+
+
 <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Metalusa_stock</title>
-	<link href="<?= URL_ROOT; ?>/css/bootstrap.min.css" rel="stylesheet">
-	<link href="<?= URL_ROOT; ?>/css/font-awesome.min.css" rel="stylesheet">
-	<link href="<?= URL_ROOT; ?>/css/datepicker3.css" rel="stylesheet">
-	<link href="<?= URL_ROOT; ?>/css/styles.css" rel="stylesheet">
+	<link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('/css/font-awesome.min.css')}}" rel="stylesheet">
+	<link href="{{asset('/css/datepicker3.css')}}" rel="stylesheet">
+	<link href="{{asset('/css/styles.css')}}" rel="stylesheet">
 	
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
