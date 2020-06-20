@@ -24,7 +24,7 @@
 				<h1 class="page-header">Add Categories</h1>
 			</div>
         </div><!--/.row-->
-		<form role="form" action="" method="post">
+		<form role="form" action="{{url('categories')}}" method="post">
 								<div class="form-group">
 									<label>Category Name</label>
 									<input class="form-control" name="cat_name" placeholder="Name_category">
