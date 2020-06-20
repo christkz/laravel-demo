@@ -1,11 +1,12 @@
-<script src="<?= URL_ROOT; ?>/js/jquery-1.11.1.min.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/bootstrap.min.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/chart.min.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/chart-data.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/easypiechart.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/easypiechart-data.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/bootstrap-datepicker.js"></script>
-	<script src="<?= URL_ROOT; ?>/js/custom.js"></script>
+
+<script src="{{asset('/js/jquery-1.11.1.min.js')}}"></script>
+	<script src="{{asset('/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('/js/chart.min.js')}}"></script>
+	<script src="{{asset('/js/chart-data.js')}}"></script>
+	<script src="{{asset('/js/easypiechart.js')}}"></script>
+	<script src="{{asset('/js/easypiechart-data.js')}}"></script>
+	<script src="{{asset('/js/bootstrap-datepicker.js')}}"></script>
+	<script src="{{asset('/js/custom.js')}}"></script>
 	<script>
 		window.onload = function () {
 	var chart1 = document.getElementById("line-chart").getContext("2d");
@@ -17,3 +18,5 @@
 	});
 };
 	</script>
+
+	
