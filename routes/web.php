@@ -16,11 +16,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
+//categories RESTFULL
 Route::get('/','Homecontroller@index');
 Route::get('categories','CategoriesController@index');
 Route::get('categories/create','CategoriesController@create');
 Route::post('categories','CategoriesController@store');
-
 Route::get('categories/edit/{category}','CategoriesController@edit');
 Route::put('categories/{category}','CategoriesController@update');
-Route::post('categories/destroy{category}','CategoriesController@destroy');
+Route::post('categories/destroy/{category}','CategoriesController@destroy');
