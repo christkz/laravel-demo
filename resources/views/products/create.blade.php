@@ -25,7 +25,7 @@
 			</div>
         </div><!--/.row-->
 		<form role="form" action="{{url('products')}}" method="post">
-		@csrf
+		{{csrf_field()}}
 						<div class="form-group">
 							<label for='cat_name'>Category Name</label>
 							<Select name="category_id" id="" class="forme-control"

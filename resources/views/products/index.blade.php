@@ -47,7 +47,7 @@
 
         </thead>
         <tbody>
-        <?php foreach($products as $product): ?>
+        @foreach($products as $product): 
             <tr>
                 <td> <?= $product->id; ?></td>
                 <td> <?= $product->cat_name; ?></td>
@@ -73,7 +73,7 @@
              
                         </td>
             </tr>
-            <?php endforeach; ?>
+             @endforeach
         </tbody>
     
         </table>
