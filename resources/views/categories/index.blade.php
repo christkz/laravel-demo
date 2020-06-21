@@ -59,7 +59,8 @@
                     </a>
 
                     
-                    <form action="categories/destroy/{{$category->id}}" method="post">      
+                    <form action="categories/destroy/{{$category->id}}" method="post"> 
+                    @csrf     
                         <button type="submit" class="btn btn-sm btn-danger">
                             <span class="glyphicon glyphicon-trash"> Delete</span> 
                         </button>

@@ -25,6 +25,7 @@
 			</div>
         </div><!--/.row-->
 		<form role="form" action="{{url('categories')}}" method="post">
+         		@csrf
 								<div class="form-group">
 									<label>Category Name</label>
 									<input class="form-control" name="cat_name" placeholder="Name_category">

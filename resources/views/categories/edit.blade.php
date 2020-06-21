@@ -24,10 +24,12 @@
 				<h1 class="page-header">Edit Categories</h1>
 			</div>
         </div><!--/.row-->
-		<form role="form" action="{{url('/categories/edit/')}}<?= $data['id'] ?>" method="post">
+		<form role="form" action="/categories/{{$category->id}}" method="post">
+		@csrf 
+		@method('PUT')
 								<div class="form-group">
 									<label>Text Input</label>
-									<input class="form-control"  placeholder="Name_category">
+									<input class="form-control" name="cat_name" value="{{($category->cat_name)}}" class = placeholder="Name_category">
 								</div>
 
 								<button type="submit" class="btn btn-primary">
