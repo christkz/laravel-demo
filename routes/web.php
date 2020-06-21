@@ -34,3 +34,13 @@ Route::post('products','ProductController@store');
 Route::get('products/edit/{product}','ProductController@edit');
 Route::put('products/{product}','ProductController@update');
 Route::post('products/destroy/{product}','ProductController@destroy');
+
+
+//customers RESTFULL
+Route::get('/','Homecontroller@index');
+Route::get('customers','CustomerController@index');
+Route::get('customers/create','CustomerController@create');
+Route::post('customers','CustomerController@store');
+Route::get('customers/edit/{customer}','CustomerController@edit');
+Route::put('customers/{customer}','CustomerController@update');
+Route::post('customers/destroy/{customer}','CustomerController@destroy');
