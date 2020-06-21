@@ -17,11 +17,11 @@ class ProductController extends Controller
     {
         //
         $products=DB::table('categories')
-        ->join('products','products.category_id','category_id')
+        ->join('products','products.category_id','categories.id')
         ->get();
         return view('products/index',[
             'products'=>$products
-        ]
+        ] 
     );
     }
 
@@ -58,7 +58,7 @@ class ProductController extends Controller
         $product->product_name = $request -> product_name;
         $product->unit_price = $request -> unit_price;
         $product->save();
-        return redirect('product');
+        return redirect('products');
 
 
     }
