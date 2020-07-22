@@ -21,21 +21,39 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Edit Categories</h1>
+				<h1 class="page-header">Update Products</h1>
 			</div>
         </div><!--/.row-->
-		<form role="form" action="/categories/{{$category->id}}" method="post">
+		<form role="form" action="/products/{{$product->id}}" method="post">
 		@csrf 
 		@method('PUT')
-								<div class="form-group">
-									<label>Text Input</label>
-									<input class="form-control" name="cat_name" value="{{($category->cat_name)}}" class = placeholder="Name_category">
-								</div>
-
+				<div class="form-group">
+					<label for="cat_name">Category name</label>
+						<select name="category_id" id="" class="form-control">
+								<option value="">Select category</option>
+								@foreach($categories as $category)
+								<option value="{{$category->id}}">{{$category->cat_name}}</option>
+								@endforeach
+						</select>
+				 </div>
+				 <div class="form-group">
+						<label for="">Product name</label>
+						<input type="text" name="product_name" id="" value="{{$product->product_name}}" class="form-control" class="@error('product_name') is-danger @enderror" placeholder="" aria-describedby="helpId">
+						@error('product_name')
+						<div class="alert alert-danger">{{$message}}</div>
+						@enderror
+				 </div>
+				 <div class="form-group">
+						<label for="">Unit price</label>
+						<input type="text" name="unit_price" id="" value="{{$product->unit_price}}" class="form-control" class="@error('unit_price') is-danger @enderror" placeholder="" aria-describedby="helpId">
+						@error('unit_price')
+						<div class="alert alert-danger">{{$message}}</div>
+						@enderror
+                </div>
 								<button type="submit" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-save"></span>    
-                                Enregistre</button>
-									<button type="reset" class="btn btn-default">Annuler</button>
+                                 <span class="glyphicon glyphicon-save"></span>    
+                                     Save</button>
+								<button type="reset" class="btn btn-default">Annuler</button>
 </form>
 </body>
 </html>

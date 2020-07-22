@@ -28,13 +28,17 @@
          		@csrf
 								<div class="form-group">
 									<label>Category Name</label>
-									<input class="form-control" name="cat_name" placeholder="Name_category">
+									<input class="form-control" class="@error('cat_name') is-danger @enderror" name="cat_name" placeholder="Name_category">
+									@error('cat_name')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
 								</div>
 
 								<button type="submit" class="btn btn-primary">
 								<span class="glyphicon glyphicon-save"> </span>
 						
-								Enregistre</button>
+								Save</button>
+								<button type="reset">Reset</button>
 									
 </form>
 </body>

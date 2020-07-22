@@ -60,7 +60,8 @@
 
 								<button type="submit" class="btn btn-primary">
 								<span class="glyphicon glyphicon-save"> </span>
-						            	</button>
+										save</button>
+									
                                 <button class="btn btn-default" type="reset">Reset</button>
 									
 </form>

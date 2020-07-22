@@ -64,9 +64,9 @@
 
                     
                   
-                    <form action="products/destroy/{{$product->id}}" method="post"> 
+                    <form action="products/destroy/{{$product->id}}" method="POST"> 
                     @csrf     
-                        <button type="submit" onclick(return confirm('voulez-vous vraiment supprimer')) class="btn btn-sm btn-danger">
+                        <button type="submit" onclick="return confirm('voulez-vous vraiment supprimer')" class="btn btn-sm btn-danger">
                             <span class="glyphicon glyphicon-trash"> Delete</span> 
                         </button>
                     </form>
