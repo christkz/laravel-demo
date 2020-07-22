@@ -21,13 +21,13 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Categories</h1>
+				<h1 class="page-header">Product</h1>
 			</div>
         </div><!--/.row-->
-    <a href="{{url('/categories/create')}}">
+    <a href="{{url('/products/create')}}">
         <button type="submit"  class="btn btn-success">
         <span class="glyphicon glyphicon-plus"></span>
-        Nouveau categorie
+        New product
     
     </button>
     </a>
@@ -38,19 +38,23 @@
  
         <tr>
 
-            <th>Id_categorie</th>
-            <th>Nom-categorie</th>
+            <th>Id_Product</th>
+            <th>Category_name</th>
+            <th>Product_name</th>
+            <th>Unit_Price</th>
             <th>Action</th>
         </tr>
 
         </thead>
         <tbody>
-        <?php foreach($categories as $category): ?>
+        <?php foreach($products as $product): ?>
             <tr>
-                <td> <?= $category->id; ?></td>
-                <td> <?= $category->cat_name; ?></td>
+                <td> <?= $product->id; ?></td>
+                <td> <?= $product->cat_name; ?></td>
+                <td> <?= $product->product_name; ?></td>
+                <td> <?= $product->unit_price; ?></td>
                 <td>
-                    <a href="categories/edit/{{$category->id}}">
+                    <a href="products/edit/{{$product->id}}">
                     
                     <button type="submit" class="btn btn-sm btn-primary">
                         <span class="glyphicon glyphicon-edit"> Edit</span>   
@@ -59,16 +63,14 @@
                     </a>
 
                     
-                    <form action="categories/destroy/{{$category->id}}" method="post"> 
+                  
+                    <form action="products/destroy/{{$product->id}}" method="post"> 
                     @csrf     
                         <button type="submit" onclick(return confirm('voulez-vous vraiment supprimer')) class="btn btn-sm btn-danger">
                             <span class="glyphicon glyphicon-trash"> Delete</span> 
                         </button>
                     </form>
-            
-                    
-                            
-                        
+             
                         </td>
             </tr>
             <?php endforeach; ?>

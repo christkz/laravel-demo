@@ -28,9 +28,9 @@ Route::post('categories/destroy/{category}','CategoriesController@destroy');
 
 //products RESTFULL
 Route::get('/','Homecontroller@index');
-Route::get('products','productsController@index');
-Route::get('products/create','productsController@create');
-Route::post('products','productsController@store');
-Route::get('products/edit/{product}','productsController@edit');
-Route::put('products/{product}','productsController@update');
-Route::post('products/destroy/{product}','productsController@destroy');
+Route::get('products','ProductController@index');
+Route::get('products/create','ProductController@create');
+Route::post('products','ProductController@store');
+Route::get('products/edit/{product}','ProductController@edit');
+Route::put('products/{product}','ProductController@update');
+Route::post('products/destroy/{product}','ProductController@destroy');

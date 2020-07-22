@@ -16,7 +16,7 @@ class ProductController extends Controller
     {
         //
         $products=DB::table('categories')
-        ->join('products','products.category_id','category.id')
+        ->join('products','products.category_id','category_id')
         ->get();
         return view('products/index',[
             'products'=>$products
