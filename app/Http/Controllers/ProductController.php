@@ -69,7 +69,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
         //
     }
@@ -83,11 +83,11 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //
-        $categories=Category::all();
+        $categories = Category::all();
         $product = Product::find($product->id);
-        return view('products/edit',[
-          'product' => $product,
-          'categories' => $categories
+        return view('products/edit', [
+            'product' => $product,
+            'categories' => $categories
         ]);
     }
 
@@ -115,12 +115,7 @@ class ProductController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy(Product $product)
     {
         //
