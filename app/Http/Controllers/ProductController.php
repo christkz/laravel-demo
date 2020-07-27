@@ -83,9 +83,15 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //
+        $category=DB::table('categories')
+        ->join('products','products.category_id','categories.id')
+        ->where('products.id','=',$product->id)
+        ->first();
+
         $categories = Category::all();
         $product = Product::find($product->id);
         return view('products/edit', [
+            'category'=> $category,
             'product' => $product,
             'categories' => $categories
         ]);
