@@ -44,3 +44,12 @@ Route::post('customers','CustomersController@store');
 Route::get('customers/edit/{customer}','CustomersController@edit');
 Route::put('customers/{customer}','CustomersController@update');
 Route::post('customers/destroy/{customer}','CustomersController@destroy');
+
+//orders RESTFULL
+Route::get('/','Homecontroller@index');
+Route::get('orders','OrdersController@index');
+Route::get('orders/create','OrdersController@create');
+Route::post('orders','OrdersController@store');
+Route::get('orders/edit/{order}','OrdersController@edit');
+Route::put('orders/{order}','OrdersController@update');
+Route::post('orders/destroy/{order}','OrdersController@destroy');
