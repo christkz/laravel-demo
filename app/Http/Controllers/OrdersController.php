@@ -21,13 +21,12 @@ class OrdersController extends Controller
         //
 
         $orders=DB::table('customers');
-        $order=DB::table('products')
+        $orders=DB::table('products')
         ->join('orders','orders.customer_id','customers.id','orders.product_id','products.id')
         ->get();
         return view('orders/index',[
 
-            'orders'=>$orders,
-            'orders'=>$order
+            'orders'=>$orders
         ] 
     );
     }
